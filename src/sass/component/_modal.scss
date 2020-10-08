@@ -9,8 +9,8 @@
 	@include transition("opacity");
 	overflow: hidden;
 	display: flex;
-	// align-items: center;
-	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
 	opacity: 0;
 	&.is-active {
 		opacity: 1;
