@@ -86,22 +86,36 @@ tr:last-child td {
 
 // A table wrapping element that adds horizontal scrolling (with fancy shadows)
 .c-table-scrollingwrapper {
+	
+  // Settings
+  $shadow-size: 1em;
+  $shadow-opacity: 0.25;
+  $mask-size: 4em;
+  $mask-feather-size: 7em;
+
+  // Move bottom margin to container
+  & > table { margin: 0; }
+  margin-bottom: $base-spacing;
 
   // This is to make sure that the table doesn't just squish down
   // Not sure the concept is the solidest - to be revisted
-  th { white-space: nowrap; }
+  th, td { white-space: nowrap; }
 
+  // Allow the container to scroll
   overflow: auto;
 
   // Adapted from https://css-scroll-shadows.now.sh/
-  background: 
-    linear-gradient( 90deg , white 33% , rgba( 255,255,255 , 0 ) ),
-    linear-gradient( 90deg , rgba( 255,255,255 , 0 ), white 66% ) 100% 0,
-    radial-gradient( farthest-side at 0 50% , rgba( 0,0,0 , 0.5 ) , transparent ),
-    radial-gradient( farthest-side at 100% 50% , rgba( 0,0,0 , 0.5 ) , transparent ) 100% 0;
-  background-color: #ffffff;
+  background:
+    // The masks that will obscure the shadow at the wrapper's left/right edges
+    linear-gradient( 90deg , white $shadow-size , transparent ),
+    linear-gradient( 90deg , transparent , white calc( 100% - #{ $shadow-size } ) ),
+	// Feather the masks in from top and bottom
+    linear-gradient( white , transparent $mask-feather-size , transparent calc( 100% - #{ $mask-feather-size } ) , white ),
+    // Add in the shadows under the rest
+	linear-gradient( 90deg , rgba( black , $shadow-opacity ) , transparent ),
+    linear-gradient( 90deg , transparent , rgba( black , $shadow-opacity ) );
   background-repeat: no-repeat;
-  background-attachment: local , local , scroll , scroll;
-  background-size: 3em 100% , 3em 100% , 1em 100% , 1em 100%;
-
+  background-attachment: local , local , local , scroll , scroll;
+  background-size: $mask-size 100% , $mask-size 100% , 100% 100% , $shadow-size 100% , $shadow-size 100%;
+  background-position: left center , right center , center , left center , right center;
 }

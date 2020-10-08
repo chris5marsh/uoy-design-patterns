@@ -230,9 +230,19 @@ define( [ 'app/utils' ] , function( UTILS )
 			
 		}
 
-		// Inject our form
+		// Find out where to inject the form
 		var $parent = this.$table.parentNode;
-		$parent.insertBefore( $form , this.$table );
+		var $before = this.$table;
+		
+		// If the parent is a wrapper for the table use its parent instead
+		if( $parent.matches( '.c-table-scrollingwrapper' ) )
+		{
+			$before = $parent;
+			$parent = $parent.parentNode;
+		}
+
+		// Inject our form
+		$parent.insertBefore( $form , $before );
 	};
 
 	// --------------------------------------------------

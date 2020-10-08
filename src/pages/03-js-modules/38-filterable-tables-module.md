@@ -32,6 +32,7 @@ var m = new FILTERABLE({
 
 ### Example
 
+<div class="c-table-scrollingwrapper">
 <table class="js-filterable-table">
   <thead>
     <tr>
@@ -228,6 +229,7 @@ var m = new FILTERABLE({
     </tr>
   </tbody>
 </table>
+</div>
 
 ### Example using accommodation tables
 
