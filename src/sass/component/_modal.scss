@@ -68,7 +68,7 @@
   	@include demarginalise;
   	background: $c-modal__caption-background-solid;
  	color: $c-modal__caption-color;
-	padding: 1em;
+	 padding: $base-spacing/2 $base-spacing;
 }
 
 
