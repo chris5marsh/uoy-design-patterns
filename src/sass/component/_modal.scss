@@ -24,8 +24,6 @@
 	background-color: black;
 	position: absolute;
 	max-width: 80vw;
-	max-height: 70vh;
-	
 	@include transition("opacity");
 	opacity: 0;
 	&.is-active {
