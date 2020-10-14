@@ -206,11 +206,11 @@ TABS.prototype.active_tab_attributes = function ( hash , dontfocus)
 
 	// Set tab elements to active 
 	tab.classList.add("is-active");
+	tab.setAttribute('role' , 'tab');
 	link.setAttribute('tabindex', '0');
 	link.setAttribute('aria-controls' , contentID);
 	link.setAttribute('aria-selected' , 'true');
 	link.setAttribute('aria-expanded' , 'true');
-	link.setAttribute('role' , 'tab');
 
 	// Set content elements to active 
 	content.classList.add("is-active");
