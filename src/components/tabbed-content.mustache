@@ -1,7 +1,7 @@
 <div class="c-tabs c-tabs--{{#type}}{{this}}{{/type}}{{^type}}horizontal{{/type}} {{#mode}}c-tabs--{{this}}{{/mode}} js-tabs">
   <ul role="tablist" class="c-tabs__nav">
     {{#tabs}}
-      <li class="c-tabs__tab{{#if @first}} is-active{{/if}}"><a role="tab" aria-controls="{{this.id}}" class="c-tabs__link" href="#{{this.id}}" aria-selected="{{#if @first}}true{{else}}false{{/if}}">{{this.title}}</a></li>
+      <li role="tab" class="c-tabs__tab{{#if @first}} is-active{{/if}}"><a aria-controls="{{this.id}}" class="c-tabs__link" href="#{{this.id}}" aria-selected="{{#if @first}}true{{else}}false{{/if}}">{{this.title}}</a></li>
     {{/tabs}}
   </ul>
   <div class="c-tabs__container">
