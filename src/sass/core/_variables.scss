@@ -367,7 +367,7 @@ $c-main-header__logo-size--small: 152px;
 // component/_hero.scss
 $c-hero-background:                   colour( "grey", 900 );  //$charcoal
 $c-hero__content-color:                colour( "grey", 100 );  //$light;
-$c-hero__caption-background-solid:    colour( "grey", 900 );  //$black
+$c-hero__caption-background-solid:    black;  //$black
 $c-hero__caption-background-alpha:    transparentize($c-hero__caption-background-solid, 0.4);
 $c-hero__caption-background-gradient: linear-gradient(
                                         transparent,
