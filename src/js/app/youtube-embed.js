@@ -59,6 +59,8 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
 
         this.iframe = this.createIframe();
 
+        
+
         var that = this;
         var resizeFn = UTILS.debounce(function (e) {
             that.setDimensions();
@@ -67,7 +69,38 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
         $window.on('resize', null, {that: this}, resizeFn);
 
         console.info(this);
+
+     
+       
     };
+
+
+    YOUTUBE.prototype.getVideoTitle = function ( videoID , callback ){
+
+         // Get the URL
+        function getURL(url, success) {
+            var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+            xhr.open('GET', url);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState>3 && xhr.status==200) success(xhr.responseText);
+            };
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.send();
+            return xhr;
+        }
+
+        // Authenticate access to API and retreive our video data
+       return getURL( 'https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+videoID+'&key=AIzaSyBMXKei1d7in0xiNuk0kVarPgsUyhTSLkc' , function( data )
+        {
+            data = JSON.parse( data );
+            //Return the video title from the API
+            callback(data.items[0].snippet.title);
+        });
+    }
+
+
+   
+
 
     YOUTUBE.prototype.getDimensions = function () {
         var videoWidth = this.container.width();
@@ -100,13 +133,19 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
         $window.trigger('content.updated', ['youtube', this]);
     };
 
+
+
+
     YOUTUBE.prototype.createIframe = function () {
         var videoDimensions = this.getDimensions();
+        var videoTitle = this.getVideoTitle(this.id);
+        console.log(videoTitle);
         // create the embed code
         var iframe = $('<iframe>').attr({
             width: videoDimensions.width,
             height: videoDimensions.height,
             src: this.url,
+            title: videoTitle,
             allowfullscreen: true
         });
         // add to container
@@ -115,6 +154,9 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
         $window.trigger('content.updated', ['youtube', this]);
         return iframe;
     };
+
+    
+
 
     return YOUTUBE;
 });

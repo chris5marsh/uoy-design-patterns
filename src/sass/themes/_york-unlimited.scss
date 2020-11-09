@@ -256,9 +256,12 @@ $t-btn-secondary-focus:darken($t-btn-secondary, 10);
       color:darken($t-main-highlight,8);
     }
   }
+  .c-panel a,
   .c-panel--link .c-panel__more {
+    font-weight: bold;
     color: $t-main;
   }
+  .c-panel a:hover,
   .c-panel--link:hover .c-panel__more{
     color:$t-main-highlight;
   }
