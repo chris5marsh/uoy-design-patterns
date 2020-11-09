@@ -94,7 +94,7 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
         {
             data = JSON.parse( data );
             //Return the video title from the API
-            callback(data.items[0].snippet.title);
+            callback(data.items.snippet.title);
         });
 
         return video_title;
