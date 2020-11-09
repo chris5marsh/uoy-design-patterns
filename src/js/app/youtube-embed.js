@@ -90,12 +90,14 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
         }
 
         // Authenticate access to API and retreive our video data
-       return getURL( 'https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+videoID+'&key=AIzaSyBMXKei1d7in0xiNuk0kVarPgsUyhTSLkc' , function( data )
+        var video_title = getURL( 'https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+videoID+'&key=AIzaSyBMXKei1d7in0xiNuk0kVarPgsUyhTSLkc' , function( data )
         {
             data = JSON.parse( data );
             //Return the video title from the API
             callback(data.items[0].snippet.title);
         });
+
+        return video_title;
     }
 
 
