@@ -35,14 +35,14 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
         if (url.indexOf("watch") > 0) {
             videoId = url.substr((url.indexOf("v=") + 2), 11);
         } else if (url.indexOf("youtu.be") > 0) {
-            videoId = url.replace(/http(s?):\/\/youtu.be\//,"");
+            videoId = url.substr((url.indexOf(".be/") + 4), 15);
         } else {
             // can't find a URL, so let's exit out
             return false;
         }
 
         // Get any additional options from link data attributes
-        var optionList = [ 'autoplay' , 'mute' , 'cc_load_policy' ];
+        var optionList = [ 'autoplay' , 'mute' , 'cc_load_policy', 't' ];
         var optionArgs = '';
         for( var a = 0 ; a < optionList.length ; a++ ) {
           if( $( this.link ).attr( 'data-'+optionList[ a ] ) ) optionArgs += '&'+optionList[ a ]+'='+$( this.link ).attr( 'data-'+optionList[ a ] );
@@ -59,8 +59,6 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
 
         this.iframe = this.createIframe();
 
-        
-
         var that = this;
         var resizeFn = UTILS.debounce(function (e) {
             that.setDimensions();
@@ -70,39 +68,7 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
 
         console.info(this);
 
-     
-       
     };
-
-
-    YOUTUBE.prototype.getVideoTitle = function ( videoID , callback ){
-
-         // Get the URL
-        function getURL(url, success) {
-            var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-            xhr.open('GET', url);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState>3 && xhr.status==200) success(xhr.responseText);
-            };
-            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-            xhr.send();
-            return xhr;
-        }
-
-        // Authenticate access to API and retreive our video data
-        var video_title = getURL( 'https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+videoID+'&key=AIzaSyBMXKei1d7in0xiNuk0kVarPgsUyhTSLkc' , function( data )
-        {
-            data = JSON.parse( data );
-            //Return the video title from the API
-            callback(data.items.snippet.title);
-        });
-
-        return video_title;
-    }
-
-
-   
-
 
     YOUTUBE.prototype.getDimensions = function () {
         var videoWidth = this.container.width();
@@ -136,28 +102,36 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
     };
 
 
-
-
     YOUTUBE.prototype.createIframe = function () {
+
         var videoDimensions = this.getDimensions();
-        var videoTitle = this.getVideoTitle(this.id);
-        console.log(videoTitle);
         // create the embed code
         var iframe = $('<iframe>').attr({
             width: videoDimensions.width,
             height: videoDimensions.height,
             src: this.url,
-            title: videoTitle,
             allowfullscreen: true
         });
+
+        fetch('https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+this.id+'&key=AIzaSyBMXKei1d7in0xiNuk0kVarPgsUyhTSLkc')
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            return iframe.attr({
+                title: data.items[0].snippet.title
+            });
+        })
+        .catch(function(error){
+            console.log(error);
+        }); 
+
         // add to container
         this.container.html(iframe);
         // Fire update event
         $window.trigger('content.updated', ['youtube', this]);
         return iframe;
     };
-
-    
 
 
     return YOUTUBE;

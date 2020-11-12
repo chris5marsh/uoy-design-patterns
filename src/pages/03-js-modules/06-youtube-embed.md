@@ -29,12 +29,12 @@ At the time of writing, YouTube video URLs usually come in three flavours:
 &hellip;becomes&hellip;
 
 ```markup
-<div class="c-video"><iframe width="730" height="410.625" src="//www.youtube.com/embed/s67Nb0wpcbE?rel=0" allowfullscreen=""></iframe></div>
+<div class="c-video"><iframe width="730" height="410.625" src="//www.youtube.com/embed/e0BLUg7LtiE?rel=0" allowfullscreen=""></iframe></div>
 ```
 
 ### Example with options
 
-<p><a class="youtube-video-embed" data-autoplay="1" data-mute="1" data-cc_load_policy="1" href="https://www.youtube.com/watch?v=s67Nb0wpcbE">Watch the video here</a></p>
+<p><a class="youtube-video-embed" data-autoplay="1" data-mute="1" data-cc_load_policy="1" href="https://www.youtube.com/watch?v=e0BLUg7LtiE">Watch the video here</a></p>
 
 ```markup
 <p><a class="youtube-video-embed" data-autoplay="1" data-mute="1" data-cc_load_policy="1" href="https://www.youtube.com/watch?v=s67Nb0wpcbE">Watch the video here</a></p>
@@ -50,6 +50,6 @@ e.g. `https://www.youtube.com/watch?v=_8pUffDWFlM&index=1&list=PLqL9vrHSa70NmzsS
 ## Sharable, short form URL example
 Finally, this example uses the shorter, shareable URL,
 
-e.g. `https://youtu.be/_8pUffDWFlM?t=1m`
+e.g. `https://youtu.be/G1RFzsCjEYg?t=1m`
 
-<p><a class="youtube-video-embed" href="https://youtu.be/_8pUffDWFlM?t=1m">Watch the video here</a></p>
+<p><a class="youtube-video-embed" href="https://youtu.be/G1RFzsCjEYg" data-t="1m">Watch the video here</a></p>
