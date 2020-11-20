@@ -141,12 +141,19 @@
     @include round;
     max-width:$c-news__thumbnail-size;
   }
+
 }
 .c-news__poster {
   @include component-margin;
   img {
     width:100%;
     display:block;
+  }
+  &--landscape {
+    img {
+      height: 9em;    
+      object-fit: cover;
+    }
   }
 }
 .c-news__banner {
@@ -170,3 +177,5 @@
   list-style:none;
   margin-bottom: $base-spacing;
 }
+
+
