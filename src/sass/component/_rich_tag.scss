@@ -1,0 +1,43 @@
+.rich-tag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.rich-tag {
+  box-sizing: border-box;
+  background-color: $rich-tag-background-color;
+  text-transform: capitalize;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 23%;
+  flex: 1 1 206px;
+  @include mq('small', '-') {
+    max-width: 48%;
+  }
+  @include mq('medium', '~') {
+    max-width: 31%;
+  }
+}
+
+.rich-tag__title {
+  font-family: museo-sans, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0; /* for paragraphs */
+}
+
+.rich-tag__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.45;
+}

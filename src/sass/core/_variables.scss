@@ -582,6 +582,10 @@ $c-tag-background-color-alt2-hover: colour( "pink", 600 ); //darken($pink,25);
 $c-tag-color:                       colour( "grey", 100 );  //$light
 $c-tag-color-hover:                 colour( "grey", 200 );  //darken($light,5)
 
+// Rich tag
+// component/_tag.scss
+$rich-tag-background-color: colour("beige", 100);
+
 // Utility navigation
 // component/_utility-nav.scss
 $c-utility-nav__link-color:                    colour( "grey", 900 );  //$charcoal
