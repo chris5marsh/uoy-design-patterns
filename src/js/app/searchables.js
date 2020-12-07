@@ -75,9 +75,15 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
                          .attr({'type': 'text', 'id': inputName, 'name': inputName })
                          .on('keyup', { that: this }, this.checkTable);
 
+    // Add a (hidden/dummy) submit button
+    var submit = $('<button>').addClass('is-hidden')
+                              .attr({'type': 'submit'})
+                              .on('click', { that: this }, function(e){e.preventDefault();} );
+
     // Join it all together
     fe.append(fl, fi);
     fs.append(fe);
+    fs.append(submit);
     f.append(fs);
     this.searchInput = fi;
 

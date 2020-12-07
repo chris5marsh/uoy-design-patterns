@@ -38,6 +38,9 @@ define( [ 'app/utils' ] , function( UTILS )
 		// console.log( 'Fields: ------------------------- ' , this.fields );
 		// console.log( 'Data: ------------------------- ' , this.data );
 
+		// Let AT know that the table could change
+		this.$table.setAttribute( 'aria-live' , 'polite' );
+
 		// Create/insert the filter form
 		this.$form = this.render_form();
 		
@@ -227,8 +230,22 @@ define( [ 'app/utils' ] , function( UTILS )
 
 				break;
 			}
-			
+
 		}
+		
+		// Add a submit button
+		var $footer = document.createElement( 'div' );
+		$footer.setAttribute( 'class' , 'c-form__element is-hidden' );
+		$fieldset.appendChild( $footer );
+
+		var $button = document.createElement( 'button' );
+		$button.setAttribute( 'class' , '' );
+		$button.setAttribute( 'type' , 'submit' );
+		$button.innerHTML = "Submit";
+		$footer.appendChild( $button );
+		
+		// Add an event listener to make sure the form isn't actually submitted if clicked
+		$button.addEventListener( 'click' , function( e ){ e.preventDefault(); } );
 
 		// Find out where to inject the form
 		var $parent = this.$table.parentNode;
@@ -371,6 +388,9 @@ define( [ 'app/utils' ] , function( UTILS )
 	
 	FILTERABLE.prototype.input_change_handler = function( $control )
 	{
+		// Abort if no control element is provided
+		if( $control == undefined ) return false;
+		
 		// Debounce this so it doesn't fire while typing fast
 		return UTILS.debounce( function( e )
 		{

@@ -71,4 +71,4 @@ The components can be used together in many different ways, which allows us to b
 
 ## Contact
 
-The Digital Pattern Library is maintained by the Digital Platforms and Developments team in Marketing. Email [marketing-support@york.ac.uk](mailto:marketing-support@york.ac.uk) with any queries.
+The Digital Pattern Library is maintained by the Digital Platforms and Developments team in Communications. Email [communications-support@york.ac.uk](mailto:communications-support@york.ac.uk) with any queries.

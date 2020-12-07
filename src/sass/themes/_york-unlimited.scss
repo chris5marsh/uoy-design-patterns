@@ -321,7 +321,6 @@ $t-btn-secondary-focus:darken($t-btn-secondary, 10);
   .c-figure--banner {
     .c-figure__content, .c-figure__caption {
       background-color: $t-main;
-      background-color: transparentize($t-main, 0.25);
     }
   }
   .c-figure__caption--blue,
