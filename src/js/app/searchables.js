@@ -77,6 +77,7 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
 
     // Add a (hidden/dummy) submit button
     var submit = $('<button>').addClass('is-hidden')
+                              .html('Submit')
                               .attr({'type': 'submit'})
                               .on('click', { that: this }, function(e){e.preventDefault();} );
 

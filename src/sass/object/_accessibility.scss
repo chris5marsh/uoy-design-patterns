@@ -8,12 +8,13 @@
   color:$o-skip-link-color;
   background:$o-skip-link-background-color;
   width:auto;
-  line-height:2;
   z-index:128;
   height:0;
+  padding:0;
   overflow:hidden;
   &:focus {
-    height:2em;
+    height:auto;
+    padding:$base-spacing/2;
   }
   &:hover {
     color:$o-skip-link-color;
