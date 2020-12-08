@@ -28,7 +28,7 @@ define(['jquery'], function ($) {
           mode = ["DR"];
           $( "div[role='main'] h1" ).replaceWith( "<h1>Search research degrees</h1>" );
         } else {
-          mode = ["DP","DG", "UG", "UP"];
+          mode = ["DP","DG","UG","UP","DU"]; // DU added to keep `Law (Juris Doctor)` course
           $( "div[role='main'] h1" ).replaceWith( "<h1>Search postgraduate taught courses</h1>" );
         }
         
