@@ -14,7 +14,7 @@ caption {
     font-style: italic;
 }
 
-th {
+th, thead > tr > td:empty {
   @include demarginalise;
   font-weight: bold;
   text-align: left;
