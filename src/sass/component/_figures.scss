@@ -128,9 +128,9 @@
   padding:$base-spacing/2 $base-spacing;
   z-index:12;
   @include mq(small, '-') {
-    // position:static;
-    // max-width:100%;
-    // display:block;
+    position:static;
+    max-width:100%;
+    display:block;
     padding:$base-spacing/4 $base-spacing/2;
   }
   // Set link colour to caption text colour
