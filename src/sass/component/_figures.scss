@@ -413,7 +413,7 @@
     right: 0;
     top:auto;
     width: 100%;
-    @include mq('tiny') {
+    @include mq('small', '-') {
       position:static;
       display:block;
       &.c-figure__content--blue {

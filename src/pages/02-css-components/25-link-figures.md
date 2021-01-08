@@ -58,7 +58,7 @@ component("grid", { "atoms":[
 component("grid", { "atoms":[
   { "grid-row": { "atoms": [
     { "grid-box": { "size": "full", "atoms": {
-      "figure-link": { "color":"charcoal", "image": "https://picsum.photos/800/800/?image=991", "url":"http://google.com", "content": { "text" :"<h3>Content title</h3>\n<p>Here is some content.</p>\n<button class=\"c-btn c-btn--medium c-btn--block\">Click here for more</button>" } }
+      "figure-link": { "color":"charcoal", "image": "https://picsum.photos/800/800/?image=991", "url":"http://google.com", "caption":"This is a caption", "content": { "text" :"<h3>Content title</h3>\n<p>Here is some content.</p>\n<button class=\"c-btn c-btn--medium c-btn--block\">Click here for more</button>" } }
     } } }
   ] } }
 ] });

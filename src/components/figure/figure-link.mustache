@@ -1,4 +1,5 @@
 <a class="c-figure c-figure--link{{#type}} c-figure--{{this}}{{/type}}" href="{{url}}">
-  <img class="c-figure__image" src="{{image}}">{{#content}}
+  <img class="c-figure__image" src="{{image}}">{{#caption}}<figcaption class="c-figure__caption c-figure__caption--top-right"><i class="c-icon c-icon--camera c-figure__caption-icon"></i> {{this}} </figcaption>{{/caption}}{{#content}}
+  
   <div class="c-figure__content{{#if @root/color}} c-figure__content--{{@root/color}}{{/if}}">{{text}}</div>{{/content}}
 </a>
