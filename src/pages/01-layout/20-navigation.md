@@ -210,12 +210,12 @@ The selected level 2 title will appear in larger text (this will be something li
 ### Page title
 
 <div class="c-page-title">
-  <h1 class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></h1>
+  <p class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></p>
 </div>
 
 ```markup
 <div class="c-page-title">
-  <h1 class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></h1>
+  <p class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></p>
 </div>
 ```
 
@@ -552,7 +552,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
   <div class="o-grid__row">
     <div class="o-grid__box o-grid__box--full">
       <div class="c-page-title">
-        <h1 class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></h1>
+        <p class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></p>
       </div>
     </div>
   </div>
@@ -614,7 +614,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
   <div class="o-grid__row">
     <div class="o-grid__box o-grid__box--full">
       <div class="c-page-title">
-        <h1 class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></h1>
+        <p class="c-page-title__header"><a class="c-page-title__link" href="#">Navigation</a></p>
       </div>
     </div>
   </div>
