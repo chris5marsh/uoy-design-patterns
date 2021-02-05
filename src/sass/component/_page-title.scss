@@ -16,7 +16,11 @@
   max-width:$container-width;
   margin:0 auto;
 }
+
 .c-page-title__header {
+  // apply font to match h1
+  font-family: $font-title;
+  font-weight:600;
   @include font-size(24px, 1.25);
   @include tiny-padding;
   padding-top:$base-spacing/2;
