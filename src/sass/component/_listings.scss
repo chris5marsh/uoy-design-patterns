@@ -28,7 +28,6 @@
   }
 
   &__title {
-      font-weight: 400;
       @include font-size(24px, 1.2);
       color:$c-listings__title-color;
       margin-top:0;
