@@ -24,8 +24,9 @@
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
   @include mq(tiny, '-') {
+    font-size: 12px;
     &:first-of-type {
       // So text lines up with edge of box
       .c-utility-nav__link {
