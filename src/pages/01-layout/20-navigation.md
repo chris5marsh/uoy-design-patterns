@@ -118,7 +118,7 @@ The sticky nav stays in place on the page until it hits the top of the screen, a
 <nav class="c-utility-nav" role="navigation" aria-label="Utility navigation">
   <ul class="c-utility-nav__list" role="menubar" aria-hidden="false">
     <li class="c-utility-nav__item c-utility-nav__item--parent" id="staff-and-students" role="menuitem" aria-haspopup="true">
-      <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students">Staff<span class="is-hidden@tiny"> and </span><span class="is-hidden@small">/</span>students</a>
+      <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students">Staff<span class="is-hidden@tiny-"> and </span><span class="is-hidden@small+">/</span>students</a>
       <div class="c-utility-nav__subnav" aria-hidden="true" role="menu">
         <ul class="c-utility-nav__sublist">
           <li class="c-utility-nav__subitem" role="menuitem"><a class="c-utility-nav__sublink" href="#" tabindex="-1">Staff homepage</a></li>
@@ -155,7 +155,7 @@ The sticky nav stays in place on the page until it hits the top of the screen, a
     </li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Jobs</a></li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Alumni</a></li>
-    <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
+    <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe Campus</a></li>
   </ul>
 </nav>
 
@@ -163,7 +163,7 @@ The sticky nav stays in place on the page until it hits the top of the screen, a
 <nav class="c-utility-nav js-accessible-nav" role="navigation" aria-label="Utility navigation">
   <ul class="c-utility-nav__list" role="menubar" aria-hidden="false">
     <li class="c-utility-nav__item c-utility-nav__item--parent" id="staff-and-students" role="menuitem" aria-haspopup="true">
-      <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students">Staff<span class="is-hidden@tiny"> and </span><span class="is-hidden@small">/</span>students</a>
+      <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students">Staff<span class="is-hidden@tiny-"> and </span><span class="is-hidden@small+">/</span>students</a>
       <div class="c-utility-nav__subnav" aria-hidden="true" role="menu">
         <ul class="c-utility-nav__sublist">
           <li class="c-utility-nav__subitem" role="menuitem"><a class="c-utility-nav__sublink" href="#" tabindex="-1">Staff homepage</a></li>
@@ -200,7 +200,7 @@ The sticky nav stays in place on the page until it hits the top of the screen, a
     </li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Jobs</a></li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Alumni</a></li>
-    <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
+    <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe Campus</a></li>
   </ul>
 </nav>
 ```
@@ -277,7 +277,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
         <nav class="c-utility-nav" role="navigation" aria-label="Utility navigation">
           <ul class="c-utility-nav__list" role="menubar" aria-hidden="false">
             <li class="c-utility-nav__item c-utility-nav__item--parent" id="staff-and-students-2" role="menuitem" aria-haspopup="true">
-              <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students-2">Staff<span class="is-hidden@tiny"> and </span><span class="is-hidden@small">/</span>students</a>
+              <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students-2">Staff<span class="is-hidden@tiny-"> and </span><span class="is-hidden@small+">/</span>students</a>
               <div class="c-utility-nav__subnav" aria-hidden="true" role="menu">
                 <ul class="c-utility-nav__sublist">
                   <li class="c-utility-nav__subitem" role="menuitem"><a class="c-utility-nav__sublink" href="https://www.york.ac.uk/staff/" tabindex="-1">Staff homepage</a></li>
@@ -315,7 +315,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
             </li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://jobs.york.ac.uk/">Jobs</a></li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.yorkspace.net/">Alumni</a></li>
-            <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
+            <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe Campus</a></li>
           </ul>
         </nav>
       </div>
@@ -398,7 +398,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
         <nav class="c-utility-nav" role="navigation" aria-label="Utility navigation">
           <ul class="c-utility-nav__list" role="menubar" aria-hidden="false">
             <li class="c-utility-nav__item c-utility-nav__item--parent" id="staff-and-students-2" role="menuitem" aria-haspopup="true">
-              <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students-2">Staff<span class="is-hidden@tiny"> and </span><span class="is-hidden@small">/</span>students</a>
+              <a class="c-utility-nav__link js-utility-toggle" href="#staff-and-students-2">Staff<span class="is-hidden@tiny-"> and </span><span class="is-hidden@small+">/</span>students</a>
               <div class="c-utility-nav__subnav" aria-hidden="true" role="menu">
                 <ul class="c-utility-nav__sublist">
                   <li class="c-utility-nav__subitem" role="menuitem"><a class="c-utility-nav__sublink" href="https://www.york.ac.uk/staff/" tabindex="-1">Staff homepage</a></li>
@@ -436,7 +436,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
             </li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://jobs.york.ac.uk/">Jobs</a></li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.yorkspace.net/">Alumni</a></li>
-            <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
+            <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe Campus</a></li>
           </ul>
         </nav>
       </div>
