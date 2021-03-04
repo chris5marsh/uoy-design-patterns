@@ -155,6 +155,7 @@ The sticky nav stays in place on the page until it hits the top of the screen, a
     </li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Jobs</a></li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Alumni</a></li>
+    <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
   </ul>
 </nav>
 
@@ -199,6 +200,7 @@ The sticky nav stays in place on the page until it hits the top of the screen, a
     </li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Jobs</a></li>
     <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="#">Alumni</a></li>
+    <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
   </ul>
 </nav>
 ```
@@ -313,6 +315,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
             </li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://jobs.york.ac.uk/">Jobs</a></li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.yorkspace.net/">Alumni</a></li>
+            <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
           </ul>
         </nav>
       </div>
@@ -433,6 +436,7 @@ Unopened, the main navigation shows the pages currently in this section. Open it
             </li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://jobs.york.ac.uk/">Jobs</a></li>
             <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.yorkspace.net/">Alumni</a></li>
+            <li class="c-utility-nav__item" role="menuitem" aria-haspopup="false"><a class="c-utility-nav__link" href="https://www.york.ac.uk/global/globalpartnerships/europe-campus-city-college/">Europe campus</a></li>
           </ul>
         </nav>
       </div>
